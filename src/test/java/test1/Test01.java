@@ -16,10 +16,16 @@ public class Test01 {
         driver = new ChromeDriver(); // Initialize driver here
     }
 
-    @Test
+    @Test(groups={"Sanity"})
     public void hi() {
         System.out.println("hello");
         driver.get("https://in.bookmyshow.com/");
+    }
+
+    @Test(groups={"regression"})
+    public void hi2() {
+        System.out.println("hello from function 2");
+        driver.get("https://www.facebook.com/");
     }
 
     @AfterTest
