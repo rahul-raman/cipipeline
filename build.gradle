@@ -27,4 +27,7 @@ dependencies {
 
 test {
     useTestNG()
+    if (project.hasProperty('groups')) {
+        groups = project.property('groups') // Use the property if it exists
+    }
 }
