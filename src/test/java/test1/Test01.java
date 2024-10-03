@@ -28,6 +28,12 @@ public class Test01 {
         driver.get("https://www.facebook.com/");
     }
 
+    @Test(groups={"Sanity"})
+    public void hi3() {
+        System.out.println("hello from function 3");
+        driver.get("https://www.facebook.com/");
+    }
+
     @AfterTest
     public void wrapup() {
         driver.quit();
